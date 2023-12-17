@@ -1,0 +1,558 @@
+@font-face {
+  font-family: YekanBakhFaNum_bold;
+  src: url(../fonts/YekanBakhFaNum-Bold.woff);
+}
+
+@font-face {
+  font-family: YekanBakhFaNum_ExtraBold;
+  src: url(../fonts/YekanBakhFaNum-ExtraBold.woff);
+}
+
+@font-face {
+  font-family: YekanBakhFaNum_Light;
+  src: url(../fonts/YekanBakhFaNum-Light.woff);
+}
+
+@font-face {
+  font-family: YekanBakhFaNum_Regular;
+  src: url(../fonts/YekanBakhFaNum-Regular.woff);
+}
+
+@font-face {
+  font-family: YekanBakhFaNum_SemiBold;
+  src: url(../fonts/YekanBakhFaNum-SemiBold.woff);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: YekanBakhFaNum_Regular;
+}
+
+.title {
+  font-family: YekanBakhFaNum_ExtraBold;
+}
+
+p {
+  line-height: 2;
+}
+/* ====================== overlay start ========================*/
+
+.overlay {
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+}
+
+.loader {
+  width: 5cqmax;
+  height: 5cqmax;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 0.5cqmax solid #fff;
+  border-right: 0.5cqmax solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5cqmax;
+  height: 5cqmax;
+  border-radius: 50%;
+  border-left: 0.5cqmax solid #ff3d00;
+  border-bottom: 0.5cqmax solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ====================== overlay end ========================*/
+
+/* ====================== map start ========================*/
+header {
+  transition: all 0.5s;
+  position: relative;
+  z-index: 20;
+}
+
+header .hover-effect:hover {
+  cursor: pointer;
+  padding-bottom: 0.3cqmax;
+  border-bottom: 2px solid green;
+}
+
+header .logo {
+  width: 9%;
+}
+
+header .btn {
+  font-family: YekanBakhFaNum_bold;
+}
+
+header .navbar-btn {
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.bg-map {
+  background-color: rgb(32 28 39);
+  position: relative;
+}
+
+.map .star {
+  position: absolute;
+  margin-top: -100px;
+  width: 100%;
+  height: 100%;
+}
+
+.map .star canvas {
+  margin-top: -100px;
+}
+
+.map .moon {
+  position: absolute;
+  top: 15%;
+  right: 1%;
+  width: 100px;
+  transition: all 1s;
+}
+
+.map .countries span {
+  width: 1cqmax;
+  height: 1cqmax;
+  position: absolute;
+  background-color: #f44336;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.map .countries span:before {
+  content: "";
+  position: absolute;
+  width: 2cqmax;
+  height: 2cqmax;
+  bottom: -45%;
+  right: -45%;
+  border-radius: 100%;
+  background: #f44336;
+  background: radial-gradient(circle, rgb(126 192 49 / 15%) 0, #f44336 100%);
+  -webkit-animation: breathing 2s linear infinite;
+  animation: breathing 2s linear infinite;
+}
+
+.map .countries .iran {
+  background-color: #36f43f;
+}
+
+.map .countries .iran:before {
+  background: #36f43f;
+  background: radial-gradient(circle, rgb(126 192 49 / 15%) 0, #36f43f 100%);
+}
+
+.tooltip-inner {
+  background-color: #36f43f;
+  font-size: 1.33cqmax;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+  border-top-color: #36f43f;
+}
+
+.map .countries span:nth-child(1) {
+  bottom: 67%;
+  right: 33%;
+}
+
+.map .countries span:nth-child(2) {
+  bottom: 21%;
+  right: 14%;
+}
+
+.map .countries span:nth-child(3) {
+  bottom: 60%;
+  right: 14%;
+}
+
+.map .countries span:nth-child(4) {
+  bottom: 56%;
+  right: 22%;
+}
+
+.map .countries span:nth-child(5) {
+  bottom: 47%;
+  right: 25%;
+}
+
+.map .countries span:nth-child(6) {
+  bottom: 84%;
+  right: 25%;
+}
+
+.map .countries span:nth-child(7) {
+  bottom: 84%;
+  right: 43%;
+}
+
+.map .countries span:nth-child(8) {
+  bottom: 77%;
+  right: 49%;
+}
+
+.map .countries span:nth-child(9) {
+  bottom: 69%;
+  right: 43%;
+}
+
+.map .countries span:nth-child(10) {
+  bottom: 47%;
+  right: 39%;
+}
+
+.map .countries span:nth-child(11) {
+  bottom: 58%;
+  right: 44%;
+}
+
+.map .countries span:nth-child(12) {
+  bottom: 62%;
+  right: 54%;
+}
+
+.map .countries span:nth-child(13) {
+  bottom: 49%;
+  right: 58%;
+}
+
+.map .countries span:nth-child(14) {
+  bottom: 32%;
+  right: 47%;
+}
+
+.map .countries span:nth-child(15) {
+  bottom: 89%;
+  right: 71%;
+}
+
+.map .countries span:nth-child(16) {
+  bottom: 75%;
+  right: 86%;
+}
+
+.map .countries span:nth-child(17) {
+  bottom: 32%;
+  right: 69%;
+}
+
+.map .countries span:nth-child(18) {
+  bottom: 35%;
+  right: 80%;
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.05;
+  }
+  35% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 922px) {
+  header .logo {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header .logo {
+    width: 26%;
+  }
+}
+/* ====================== map end ========================*/
+
+/* ====================== sidebar start ========================*/
+header .sidebar {
+  position: fixed;
+  background-image: url(../images/sidebar-bg.jpg);
+  top: 0;
+  right: 0;
+  height: 100vh;
+  min-width: 250px;
+  max-width: 250px;
+  transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+  z-index: 999;
+  overflow: auto;
+  margin-right: -250px;
+}
+
+header .sidebar .owner img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+header .sidebar .filter .input-group-append {
+  border: 1px solid #ced4da;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+header .sidebar input:focus {
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
+header .sidebar li {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+header .sidebar li:hover {
+  opacity: 1;
+}
+
+header .sidebar .social li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .sidebar .social li:hover {
+  background-color: lightcyan;
+  animation: spin 2s infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+header .sidebar .social i {
+  color: black;
+  font-size: 18px;
+}
+
+header .sidebar .social li:hover i {
+  color: red;
+}
+/* ====================== sidebar end ========================*/
+
+/* ====================== partners start ========================*/
+.partners img {
+  width: 17%;
+}
+
+@media screen and (max-width: 992px) {
+  .partners img {
+    width: 100px;
+  }
+}
+/* ====================== partners end ========================*/
+/* ====================== Services start ========================*/
+.services {
+  background-color: #f4f7fa;
+}
+
+.services .card {
+  max-width: 20%;
+}
+
+.services .card h5 {
+  font-family: YekanBakhFaNum_bold;
+}
+
+.services .card:nth-child(1) .icon,
+.services .card:nth-child(8) .icon {
+  background-color: rgba(71, 59, 240, 0.1);
+  color: #8a93ed;
+}
+
+.services .card:nth-child(2) .icon,
+.services .card:nth-child(7) .icon {
+  background-color: rgba(246, 75, 75, 0.1);
+  color: #f64b4b;
+}
+
+.services .card:nth-child(3) .icon,
+.services .card:nth-child(6) .icon {
+  background-color: rgba(104, 213, 133, 0.1);
+  color: #68d585;
+}
+
+.services .card:nth-child(4) .icon,
+.services .card:nth-child(5) .icon {
+  background-color: rgba(19, 21, 28, 0.1);
+  color: #7a7e88;
+}
+
+@media screen and (max-width: 992px) {
+  .services .card {
+    max-width: 30%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services .card {
+    max-width: 100%;
+  }
+}
+/* ====================== Services end ========================*/
+/* ====================== plans end ========================*/
+.plans .plan {
+  border: 0.33cqmax solid #f2f6ff;
+  border-radius: 2cqmax;
+}
+
+.plans .plan.special_plan {
+  border: 0.33cqmax solid #4687ff;
+  border-radius: 2cqmax;
+}
+
+.plans .plan.special_plan .bg-primary {
+  border-radius: 2cqmax 2cqmax 0 0;
+}
+/* ====================== plans end ========================*/
+/* ====================== questions start ========================*/
+.questions {
+  background-color: #e7e9ed;
+  background-image: url(../images/planet-3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: -140px;
+  background-position-y: 400px;
+}
+
+.questions li {
+  border-radius: 2cqmax;
+  cursor: pointer;
+  line-height: 34px;
+  text-align-last: right;
+  z-index: 999;
+}
+
+.questions li.active div:nth-child(1) {
+  color: #68d585;
+}
+
+.questions .answer,
+.questions .answer p,
+.questions li .fa-chevron-down {
+  transition: all 0.5s linear;
+}
+
+.questions li.active .fa-chevron-down {
+  transform: rotate(180deg);
+}
+/* ====================== questions end ========================*/
+/* ====================== test-version start ========================*/
+.test-version {
+  background-color: #131829;
+}
+
+.test-version button {
+  background-color: #f64b4b;
+  border-radius: 2cqmax;
+}
+
+.test-version button i {
+  margin-right: 1cqmax;
+  transition: all 0.5s;
+}
+
+.test-version button:hover i {
+  margin-right: 2cqmax;
+}
+/* ====================== test-version end ========================*/
+/* ====================== footer end ========================*/
+footer {
+  background-color: #eee;
+  min-height: 85vh;
+}
+
+@media screen and (max-width: 770px) {
+  footer {
+    background-color: #eee;
+    min-height: 120vh;
+  }
+}
+
+footer .logo {
+  width: 100px;
+}
+
+footer .container {
+  z-index: 4;
+  position: relative;
+}
+
+footer img.position-absolute {
+  bottom: 0px;
+  left: 0px;
+  width: 30%;
+}
+
+footer p:hover {
+  cursor: pointer;
+  color: #36f43f;
+  transition: all 0.2s;
+}
+
+.certificate {
+  bottom: 1%;
+  left: 5%;
+  right: 5%;
+}
+
+.certificate span {
+  font-size: 13px;
+}
+
+.certificate img {
+  width: 60px;
+  margin: 0px 3px;
+}
+
+@media screen and (max-width: 572px) {
+  .certificate img {
+    width: 45px;
+    margin: 0px 2px;
+  }
+}
+/* ====================== footer end ========================*/
