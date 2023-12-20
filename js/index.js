@@ -71,7 +71,7 @@ document.body.addEventListener("wheel", (e1) => {
     header
       .querySelector(".navbar-btn")
       .classList.replace("text-white", "text-dark");
-    header.querySelector("img").src = "../images/logo-main-black.png";
+    header.querySelector("img").src = "./images/logo-main-black.png";
   } else {
     header.style.position = "relative";
     header.style.backgroundColor = "";
@@ -81,7 +81,7 @@ document.body.addEventListener("wheel", (e1) => {
     header
       .querySelector(".navbar-btn")
       .classList.replace("text-dark", "text-white");
-    header.querySelector("img").src = "../images/logo-main-white.png";
+    header.querySelector("img").src = "./images/logo-main-white.png";
   }
 });
 
