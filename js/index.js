@@ -132,7 +132,7 @@ question.forEach((e) => {
       e1.currentTarget.classList.add("active");
       e1.currentTarget.querySelector(".answer").style.height = answerHeight[e1.currentTarget.attributes.getNamedItem("number").value] + "px";
       if(matchMedia('(min-width : 1500px)').matches) {
-        e1.currentTarget.querySelector(".answer").querySelector("p").style.fontSize = 2 + "cqmax";
+        e1.currentTarget.querySelector(".answer").querySelector("p").style.fontSize = 1.5 + "cqmax";
       }else {
         e1.currentTarget.querySelector(".answer").querySelector("p").style.fontSize = 16 + "px";
       }

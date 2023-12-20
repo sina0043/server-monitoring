@@ -35,7 +35,9 @@ body {
   font-family: YekanBakhFaNum_ExtraBold;
 }
 
-p {
+p,
+h5,
+span {
   line-height: 2;
 }
 /* ====================== overlay start ========================*/
@@ -391,7 +393,7 @@ header .sidebar .social li:hover i {
 }
 
 .services .card {
-  max-width: 20%;
+  max-width: 22%;
 }
 
 .services .card h5 {
@@ -506,18 +508,8 @@ footer {
   min-height: 85vh;
 }
 
-@media screen and (max-width: 770px) {
-  footer {
-    background-color: #eee;
-    min-height: 120vh;
-  }
-}
-
-footer .logo {
-  width: 100px;
-}
-
-footer .container {
+footer .container,
+footer .items  {
   z-index: 4;
   position: relative;
 }
@@ -540,19 +532,19 @@ footer p:hover {
   right: 5%;
 }
 
-.certificate span {
-  font-size: 13px;
-}
-
-.certificate img {
-  width: 60px;
-  margin: 0px 3px;
+@media screen and (max-width: 1200px) {
+  .certificate img {
+    width: 8cqmax !important;
+  }
 }
 
 @media screen and (max-width: 572px) {
+  footer .items  {
+    margin-bottom: 23cqmax;
+  }
+
   .certificate img {
-    width: 45px;
-    margin: 0px 2px;
+    width: 6cqmax !important;
   }
 }
 /* ====================== footer end ========================*/
