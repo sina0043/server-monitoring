@@ -112,7 +112,7 @@ new Swiper(".swiper", {
 });
 
 question.forEach((e) => {
-  answerHeight.push(e.querySelector(".answer").offsetHeight);
+  answerHeight.push(e.offsetHeight - (e.querySelector(".question").offsetHeight / 2));
 });
 
 question.forEach((e) => {
@@ -130,7 +130,7 @@ question.forEach((e) => {
         e2.querySelector(".answer").querySelector("p").style.fontSize = 0 + "px";
       });
       e1.currentTarget.classList.add("active");
-      e1.currentTarget.querySelector(".answer").style.height = answerHeight[e1.currentTarget.attributes.getNamedItem("number").value] + 15 +"px";
+      e1.currentTarget.querySelector(".answer").style.height = answerHeight[e1.currentTarget.attributes.getNamedItem("number").value] +"px";
       if(matchMedia('(min-width : 1500px)').matches) {
         e1.currentTarget.querySelector(".answer").querySelector("p").style.fontSize = 1.5 + "cqmax";
       }else {

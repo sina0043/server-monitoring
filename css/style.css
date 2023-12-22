@@ -297,11 +297,33 @@ header .navbar-btn {
   header .logo {
     width: 15%;
   }
+
+  .map .moon {
+    top: 26%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .map .moon {
+    top: 25%;
+    width: 10cqmax;
+  }
 }
 
 @media screen and (max-width: 576px) {
   header .logo {
     width: 26%;
+  }
+
+  .map .moon {
+    top: 45%;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .map .moon {
+    top: 53%;
   }
 }
 /* ====================== map end ========================*/
